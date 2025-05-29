@@ -1,11 +1,11 @@
 {
-  "name": "@bitnoi.se/react-scheduler",
-  "version": "0.3.0",
+  "name": "@ikeikeikeike/react-scheduler",
+  "version": "0.3.0-ikeikeikeike.0",
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bitnoise/react-scheduler"
+    "url": "https://github.com/ikeikeikeike/react-scheduler"
   },
   "keywords": [
     "scheduler",
@@ -16,8 +16,8 @@
     "calendar"
   ],
   "author": {
-    "name": "Bitnoise",
-    "url": "https://scheduler.bitnoise.pl/"
+    "name": "ikeikeikeike",
+    "url": "https://github.com/ikeikeikeike/react-scheduler"
   },
   "scripts": {
     "dev": "vite",
@@ -30,7 +30,7 @@
     "prepare": "husky install"
   },
   "main": "dist/index.umd.js",
-  "modules": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {

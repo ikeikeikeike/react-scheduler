@@ -1,6 +1,6 @@
 import { prefixId } from "./styles";
 
-export const dayWidth = 50;
+export const dayWidth = 100;
 export const headerMonthHeight = 24;
 export const headerWeekHeight = 16;
 export const headerDayHeight = 40;
