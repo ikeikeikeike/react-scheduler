@@ -30,7 +30,7 @@ export const drawZoom2DaysInMiddle = (
   for (let i = 0; i < daysInRange; i++) {
     const dayLabel = dayjs(`${startDate.year}-${startDate.month + 1}-${startDate.dayOfMonth}`)
       .add(i, "day")
-      .format("dddd DD.MM.YYYY")
+      .format("YYYY/MM/DD dddd")
       .toUpperCase();
 
     drawRow(

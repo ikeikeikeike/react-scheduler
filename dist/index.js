@@ -3721,7 +3721,7 @@ to{
     `${t.year}-${t.month + 1}-${t.dayOfMonth}T${t.hour}:00:00`
   ).hour() * pe + 0.5 * pe;
   for (let c = 0; c < o; c++) {
-    const d = R(`${t.year}-${t.month + 1}-${t.dayOfMonth}`).add(c, "day").format("dddd DD.MM.YYYY").toUpperCase();
+    const d = R(`${t.year}-${t.month + 1}-${t.dayOfMonth}`).add(c, "day").format("YYYY/MM/DD dddd").toUpperCase();
     Ee(
       {
         ctx: e,
