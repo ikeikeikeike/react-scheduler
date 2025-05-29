@@ -33,7 +33,7 @@ export const Calendar: FC<CalendarProps> = ({
   const {
     zoom,
     startDate,
-    config: { includeTakenHoursOnWeekendsInDayView, showTooltip, showThemeToggle }
+    config: { includeTakenHoursOnWeekendsInDayView, showTooltip, showThemeToggle, showZoomToggle }
   } = useCalendar();
   const gridRef = useRef<HTMLDivElement>(null);
   const {
@@ -141,6 +141,7 @@ export const Calendar: FC<CalendarProps> = ({
           zoom={zoom}
           topBarWidth={topBarWidth}
           showThemeToggle={showThemeToggle}
+          showZoomToggle={showZoomToggle}
           toggleTheme={toggleTheme}
         />
         {data.length ? (

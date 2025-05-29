@@ -34,6 +34,7 @@ export declare type Config = {
      * show toggle button for changing theme (light/dark)
      */
     showThemeToggle?: boolean;
+    showZoomToggle?: boolean;
     /**
      * default theme (light/dark)
      * when theme toggle is displayed - this is a default value of the toggle

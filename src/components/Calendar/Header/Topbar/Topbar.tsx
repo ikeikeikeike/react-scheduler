@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import { TopbarProps } from "./types";
 
-const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, toggleTheme }) => {
+const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, showZoomToggle, toggleTheme }) => {
   const { topbar } = useLanguage();
   const {
     data,
@@ -69,23 +69,25 @@ const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, toggleTheme }) => {
       </NavigationWrapper>
       <OptionsContainer>
         {showThemeToggle && <Toggle toggleTheme={toggleTheme} />}
-        <Zoom>
-          {topbar.view}
-          <IconButton
-            isDisabled={!isPrevZoom}
-            onClick={zoomOut}
-            isFullRounded
-            iconName="subtract"
-            width="14"
-          />
-          <IconButton
-            isDisabled={!isNextZoom}
-            onClick={zoomIn}
-            isFullRounded
-            iconName="add"
-            width="14"
-          />
-        </Zoom>
+        {showZoomToggle && (
+          <Zoom>
+            {topbar.view}
+            <IconButton
+              isDisabled={!isPrevZoom}
+              onClick={zoomOut}
+              isFullRounded
+              iconName="subtract"
+              width="14"
+            />
+            <IconButton
+              isDisabled={!isNextZoom}
+              onClick={zoomIn}
+              isFullRounded
+              iconName="add"
+              width="14"
+            />
+          </Zoom>
+        )}
       </OptionsContainer>
     </Wrapper>
   );
