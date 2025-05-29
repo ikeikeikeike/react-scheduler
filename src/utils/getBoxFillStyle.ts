@@ -6,7 +6,7 @@ export const getBoxFillStyle = (config: TextAndBoxStyleConfig, theme: Theme) => 
   if (variant === "yearView")
     return isCurrent ? theme.colors.tertiary : theme.colors.gridBackground;
   if (isCurrent) return theme.colors.secondary;
-  if (!isBusinessDay) return theme.colors.secondary;
+  // if (!isBusinessDay) return theme.colors.secondary;
 
   return theme.colors.primary;
 };

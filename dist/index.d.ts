@@ -1,6 +1,6 @@
 declare const allZoomLevel: readonly [0, 1, 2];
 
-declare type ColorType = "background" | "gridBackground" | "primary" | "secondary" | "tertiary" | "textPrimary" | "textSecondary" | "accent" | "disabled" | "border" | "placeholder" | "warning" | "button" | "tooltip" | "defaultTile" | "hover";
+declare type ColorType = "background" | "gridBackground" | "primary" | "secondary" | "tertiary" | "mycolor" | "textPrimary" | "textSecondary" | "accent" | "disabled" | "border" | "placeholder" | "warning" | "button" | "tooltip" | "defaultTile" | "hover";
 
 export declare type Config = {
     zoom: ZoomLevel;

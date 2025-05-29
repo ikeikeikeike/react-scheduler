@@ -1413,6 +1413,7 @@ const H = Et, nt = "reactSchedulerOutsideWrapper", co = io`
     primary: "#F8F8FD",
     secondary: "#E6F3FF",
     tertiary: "#C9E5FF",
+    mycolor: "#FFF8DC",
     textPrimary: "#1C222F",
     textSecondary: "#FFFFFF",
     placeholder: "#777777",
@@ -1434,6 +1435,7 @@ const H = Et, nt = "reactSchedulerOutsideWrapper", co = io`
     primary: "#303b49",
     secondary: "#444e5b",
     tertiary: "#6E757F",
+    mycolor: "#BEB799",
     textPrimary: "#DADCE0",
     textSecondary: "#EAEBED",
     placeholder: "#bbbbbb",
@@ -1697,7 +1699,7 @@ const R = Je, wr = (e) => e % 4 === 0 && e % 100 > 0 || e % 400 === 0 ? 366 : 36
   isCurrentDay: e.isSame(R(), "day"),
   year: parseInt(e.format("YYYY"))
 }), qt = (e, r, t, n, o, s, i) => {
-  e.strokeStyle = i.colors.border, s ? e.fillStyle = i.colors.secondary : o ? e.fillStyle = "transparent" : e.fillStyle = i.colors.primary, e.beginPath(), e.setLineDash([]), e.fillRect(r, t, n, we), e.strokeRect(r + 0.5, t + 0.5, n, we);
+  e.strokeStyle = i.colors.border, s ? e.fillStyle = i.colors.secondary : e.fillStyle = "transparent", e.beginPath(), e.setLineDash([]), e.fillRect(r, t, n, we), e.strokeRect(r + 0.5, t + 0.5, n, we);
 }, xo = (e, r, t, n, o) => {
   for (let s = 0; s < r; s++)
     for (let i = 0; i <= t; i++) {
@@ -3553,7 +3555,7 @@ to{
   }
 }, an = (e, r) => {
   const { isCurrent: t, isBusinessDay: n, variant: o } = e;
-  return o === "yearView" ? t ? r.colors.tertiary : r.colors.gridBackground : t || !n ? r.colors.secondary : r.colors.primary;
+  return o === "yearView" ? t ? r.colors.tertiary : r.colors.gridBackground : t ? r.colors.secondary : r.colors.primary;
 }, Wt = (e, r) => {
   const { isCurrent: t, isBusinessDay: n, variant: o } = e;
   return t ? o === "bottomRow" ? r.colors.placeholder : r.colors.accent : n ? o === "bottomRow" ? r.colors.placeholder : r.colors.textPrimary : r.colors.placeholder;

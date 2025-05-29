@@ -27,6 +27,7 @@ export type ColorType =
   | "primary"
   | "secondary"
   | "tertiary"
+  | "mycolor"
   | "textPrimary"
   | "textSecondary"
   | "accent"
@@ -55,6 +56,7 @@ export const theme: DefaultTheme = {
     primary: "#F8F8FD",
     secondary: "#E6F3FF",
     tertiary: "#C9E5FF",
+    mycolor: "#FFF8DC",
 
     textPrimary: "#1C222F",
     textSecondary: "#FFFFFF",
@@ -83,6 +85,7 @@ export const darkTheme: Theme = {
     primary: "#303b49",
     secondary: "#444e5b",
     tertiary: "#6E757F",
+    mycolor: "#BEB799",
 
     textPrimary: "#DADCE0",
     textSecondary: "#EAEBED",
