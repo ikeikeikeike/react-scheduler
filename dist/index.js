@@ -3930,7 +3930,7 @@ to{
   position: absolute;
   outline: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   text-align: left;
   color: ${({ theme: e }) => e.colors.textPrimary};
   width: 100%;
