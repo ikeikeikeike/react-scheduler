@@ -57,12 +57,12 @@ const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, showZoomToggle, toggl
         )}
       </Filters>
       <NavigationWrapper>
-        <NavBtn disabled={!data?.length} onClick={handleGoPrev}>
+        <NavBtn disabled={true} onClick={handleGoPrev}>
           <Icon iconName="arrowLeft" height="15" fill={colors.textPrimary} />
           {topbar.prev}
         </NavBtn>
         <Today onClick={handleGoToday}>{topbar.today}</Today>
-        <NavBtn disabled={!data?.length} onClick={handleGoNext}>
+        <NavBtn disabled={true} onClick={handleGoNext}>
           {topbar.next}
           <Icon iconName="arrowRight" height="15" fill={colors.textPrimary} />
         </NavBtn>

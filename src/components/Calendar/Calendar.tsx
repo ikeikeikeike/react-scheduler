@@ -144,19 +144,13 @@ export const Calendar: FC<CalendarProps> = ({
           showZoomToggle={showZoomToggle}
           toggleTheme={toggleTheme}
         />
-        {data.length ? (
-          <Grid
-            data={page}
-            zoom={zoom}
-            rows={totalRowsPerPage}
-            ref={gridRef}
-            onTileClick={onTileClick}
-          />
-        ) : (
-          <StyledEmptyBoxWrapper width={topBarWidth}>
-            <EmptyBox />
-          </StyledEmptyBoxWrapper>
-        )}
+        <Grid
+          data={page}
+          zoom={zoom}
+          rows={totalRowsPerPage}
+          ref={gridRef}
+          onTileClick={onTileClick}
+        />
         {showTooltip && isVisible && tooltipData?.resourceIndex > -1 && (
           <Tooltip tooltipData={tooltipData} zoom={zoom} />
         )}
