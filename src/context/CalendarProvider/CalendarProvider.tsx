@@ -136,9 +136,9 @@ const CalendarProvider = ({
     return () => window.removeEventListener("resize", handleResize);
   }, [zoom]);
 
-  useEffect(() => {
-    onRangeChange?.(range, defaultStartDate.toDate());
-  }, [onRangeChange, range]);
+  // useEffect(() => {
+  //   onRangeChange?.(range, defaultStartDate.toDate());
+  // }, [onRangeChange, range]);
 
   useEffect(() => {
     // when defaultStartDate changes repaint grid
