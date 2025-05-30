@@ -417,11 +417,9 @@ to{
   ${br}
   display: inline;
   font-weight: ${({bold:e})=>e?"600":"400"};
-  &:first-child {
-    &::after {
-      content: "|";
-      margin: 0 3px;
-    }
+  &:not(:first-child)::before {
+    content: "|";
+    margin: 0 3px;
   }
 `,yi=W.p`
   ${Ze}
@@ -430,7 +428,7 @@ to{
   position: sticky;
   left: ${ye+16}px;
   overflow: hidden;
-`,wi=({row:e,data:r,zoom:t,onTileClick:n})=>{const{date:o}=Ge(),s=Nt(o,t),{y:i,x:a,width:l}=fi(e,s.startDate,s.endDate,r.startDate,r.endDate,t),{colors:c}=Pe();return v.jsx(mi,{style:{left:`${a}px`,top:`${i}px`,backgroundColor:`${r.bgColor??c.defaultTile}`,width:`${l}px`,color:pi(r.bgColor??"")},onClick:()=>n==null?void 0:n(r),children:v.jsx(vi,{children:v.jsxs(gi,{children:[v.jsx(Rr,{bold:!0,children:r.title}),v.jsx(Rr,{children:r.subtitle}),v.jsx(yi,{children:r.description})]})})})},bi=({data:e,zoom:r,onTileClick:t})=>{const n=w.useCallback(()=>{let o=0;return e.map((s,i)=>(i>0&&(o+=Math.max(e[i-1].data.length,1)),s.data.map((a,l)=>a.map(c=>v.jsx(wi,{row:l+o,data:c,zoom:r,onTileClick:t},c.id))))).flat(2)},[e,t,r]);return v.jsx(v.Fragment,{children:n()})};W.div`
+`,wi=({row:e,data:r,zoom:t,onTileClick:n})=>{const{date:o}=Ge(),s=Nt(o,t),{y:i,x:a,width:l}=fi(e,s.startDate,s.endDate,r.startDate,r.endDate,t),{colors:c}=Pe();return v.jsx(mi,{style:{left:`${a}px`,top:`${i}px`,backgroundColor:`${r.bgColor??c.defaultTile}`,width:`${l}px`,color:pi(r.bgColor??"")},onClick:()=>n==null?void 0:n(r),children:v.jsx(vi,{children:v.jsxs(gi,{children:[v.jsx(Rr,{bold:!0,children:r.title}),r.subtitle&&v.jsx(Rr,{children:r.subtitle}),v.jsx(yi,{children:r.description})]})})})},bi=({data:e,zoom:r,onTileClick:t})=>{const n=w.useCallback(()=>{let o=0;return e.map((s,i)=>(i>0&&(o+=Math.max(e[i-1].data.length,1)),s.data.map((a,l)=>a.map(c=>v.jsx(wi,{row:l+o,data:c,zoom:r,onTileClick:t},c.id))))).flat(2)},[e,t,r]);return v.jsx(v.Fragment,{children:n()})};W.div`
   box-sizing: border-box;
   font-family: Inter;
   padding: 0 0.5rem;
