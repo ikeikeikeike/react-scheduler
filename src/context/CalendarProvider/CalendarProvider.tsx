@@ -118,7 +118,7 @@ const CalendarProvider = ({
             setDate(dayjs());
             break;
         }
-        onRangeChange?.(range);
+        onRangeChange?.(range, defaultStartDate.toDate());
       }, 300);
       load();
     },
@@ -137,7 +137,7 @@ const CalendarProvider = ({
   }, [zoom]);
 
   useEffect(() => {
-    onRangeChange?.(range);
+    onRangeChange?.(range, defaultStartDate.toDate());
   }, [onRangeChange, range]);
 
   useEffect(() => {
@@ -159,7 +159,7 @@ const CalendarProvider = ({
     setDate((prev) =>
       zoom === 2 ? prev.add(zoom2ButtonJump, "hours") : prev.add(buttonWeeksJump, "weeks")
     );
-    onRangeChange?.(range);
+    onRangeChange?.(range, defaultStartDate.toDate());
   };
 
   const handleScrollNext = useCallback(() => {
@@ -177,7 +177,7 @@ const CalendarProvider = ({
     setDate((prev) =>
       zoom === 2 ? prev.subtract(zoom2ButtonJump, "hours") : prev.subtract(buttonWeeksJump, "weeks")
     );
-    onRangeChange?.(range);
+    onRangeChange?.(range, defaultStartDate.toDate());
   };
 
   const handleScrollPrev = useCallback(() => {
@@ -205,7 +205,7 @@ const CalendarProvider = ({
     if (!isAvailableZoom(zoomLevel)) return;
     setZoom(zoomLevel);
     setCols(getCols(zoomLevel));
-    onRangeChange?.(range);
+    onRangeChange?.(range, defaultStartDate.toDate());
   };
 
   const handleFilterData = () => onFilterData?.();

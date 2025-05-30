@@ -2257,7 +2257,7 @@ const ts = ({
             m(R());
             break;
         }
-        s == null || s(A);
+        s == null || s(A, o.toDate());
       }, 300)();
     },
     [s, A, d]
@@ -2268,7 +2268,7 @@ const ts = ({
     const x = () => _(Fe(d));
     return window.addEventListener("resize", x), () => window.removeEventListener("resize", x);
   }, [d]), ue(() => {
-    s == null || s(A);
+    s == null || s(A, o.toDate());
   }, [s, A]), ue(() => {
     T(!1);
   }, [o]), ue(() => {
@@ -2277,7 +2277,7 @@ const ts = ({
   const S = () => {
     t || (m(
       (x) => d === 2 ? x.add(mr, "hours") : x.add(gr, "weeks")
-    ), s == null || s(A));
+    ), s == null || s(A, o.toDate()));
   }, b = ye(() => {
     t || (D("forward"), We(() => {
       J("forward");
@@ -2285,7 +2285,7 @@ const ts = ({
   }, [t, D, J]), F = () => {
     t || (m(
       (x) => d === 2 ? x.subtract(mr, "hours") : x.subtract(gr, "weeks")
-    ), s == null || s(A));
+    ), s == null || s(A, o.toDate()));
   }, g = ye(() => {
     !v || t || (D("back"), We(() => {
       J("back");
@@ -2295,7 +2295,7 @@ const ts = ({
       J("middle", "smooth");
     }, 300)());
   }, [t, D, J]), j = () => ee(d + 1), U = () => ee(d - 1), ee = (x) => {
-    Ko(x) && (u(x), _(Fe(x)), s == null || s(A));
+    Ko(x) && (u(x), _(Fe(x)), s == null || s(A, o.toDate()));
   }, $ = () => i == null ? void 0 : i(), { Provider: k } = Qr;
   return /* @__PURE__ */ O(
     k,
