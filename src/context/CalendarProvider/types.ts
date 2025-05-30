@@ -34,7 +34,7 @@ export type CalendarProviderProps = {
   defaultStartDate?: dayjs.Dayjs;
   data?: SchedulerData;
   config: Config;
-  onRangeChange?: (range: ParsedDatesRange, startDate: Date) => void;
+  onRangeChange?: (range: ParsedDatesRange, defaultStartDate: Date) => void;
   onFilterData?: () => void;
   onClearFilterData?: () => void;
 };
