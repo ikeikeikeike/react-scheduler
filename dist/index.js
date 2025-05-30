@@ -3662,7 +3662,7 @@ to{
         width: o,
         height: Ke,
         textYPos: Jr,
-        label: `${t.toUpperCase()} ${u}`,
+        label: `${u}${t.toUpperCase()}`,
         font: ke.middleRow
       },
       n

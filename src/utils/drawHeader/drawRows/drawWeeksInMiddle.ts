@@ -42,7 +42,7 @@ export const drawWeeksInMiddle = (
         width,
         height: headerWeekHeight,
         textYPos: middleRowTextYPos,
-        label: `${weekLabel.toUpperCase()} ${weekIndex}`,
+        label: `${weekIndex}${weekLabel.toUpperCase()}`,
         font: fonts.middleRow
       },
       theme
